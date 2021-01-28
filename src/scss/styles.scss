@@ -1,0 +1,113 @@
+html * {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+.card-title {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 27px;
+    size: normal;
+}
+.card-price {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    size: normal;
+}
+.card-text {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    size: normal;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 70%;
+  height: 60px; /* Set the fixed height of the footer here */
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #f5f5f5;
+}
+
+.circle {
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  &:hover {
+    cursor: pointer;
+    border: 5px solid #000000;
+    box-sizing: border-box;
+    border-radius: 100px;
+  }
+}
+.activeCircle {
+  border: 5px solid cadetblue !important;
+}
+
+.img-thumb {
+    height: 100%;
+    width: 155%;
+    max-width: 515px;
+    max-height: 644px;
+}
+
+.square {
+  height: 48px;
+  width: 48px;
+  border: 1px solid #131212;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right:10px;
+  &:active{
+    background-color: cadetblue;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: black;
+    color: blanchedalmond;
+  }
+}
+
+.activeSquare {
+  background-color: cadetblue !important;
+}
+
+.squarebag {
+  height: 20px;
+  width: 20px;
+  display:inline-flex;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  & .nav-link {
+    font-size: 16px;
+    line-height: 24px;
+    align-items: center;
+    font-weight: 600;
+  }
+  &:visited {
+    color: black;
+  }
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
+  &:active {
+    color: black;
+  }
+}
+
+.table {
+  & thead {
+    background-color: #FAFAFA;
+  }
+  & th, & td {
+    vertical-align:middle;
+  }
+}

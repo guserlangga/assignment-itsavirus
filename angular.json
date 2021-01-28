@@ -31,9 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/scss/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/jquery/dist/jquery.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -127,5 +130,8 @@
       }
     }
   },
-  "defaultProject": "assigment-itsavirus"
+  "defaultProject": "assigment-itsavirus",
+  "cli": {
+    "analytics": "0fc4e116-bd79-46fb-a52d-9b1d5fbf03cf"
+  }
 }

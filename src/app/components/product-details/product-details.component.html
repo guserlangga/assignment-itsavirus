@@ -1,0 +1,58 @@
+<div class="container pt-5">
+    <div class="row pb-5">
+        <div class="col-md-6">
+            <div class="main-img">
+                <img src="{{ imageSrc }}" id="current">
+            </div>
+            <div class="imgs pt-2">
+                <img *ngFor="let image of images" src="{{ image }}" (click)="onclick(image)">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <p>{{ item.category }}</p>
+            <h2>{{ item.name }}</h2>
+            <p>{{ item.description }}</p>
+
+            <a href="{{ item.video }}" target="_blank" class="py-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor" class="bi bi-play-circle mr-2"
+                    viewBox="0 0 16 16" style="background: rgba(19, 18, 18, 0.05);border-radius: 100px;">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                    <path
+                        d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                </svg>
+                <SPAN class="play">PLAY VIDEO</SPAN>
+            </a>
+
+            <h5 class="pt-5">SELECT SIZE (US)</h5>
+            <div class="row">
+                <div class="col-md-8 pb-2">
+                    <ul class="list-inline">
+                        <li class="list-inline-item" *ngFor="let size of item.sizes">
+                            <div class="square" (click)="onClickSize(size)" [ngClass]="{ 'activeSquare' : activeSize == size }">
+                                <span style="margin:auto;">{{ size }}</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h5>SELECT COLOR</h5>
+            <ul class="list-inline">
+                <li class="list-inline-item" *ngFor="let color of item.colors">
+                    <div class="circle" [style.background-color]="color.color_hash" (click)="onClickColor(color)" [ngClass]="{ 'activeCircle' : activeColor == color }"></div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row bg-light p-4">
+        <div class="col-md-6">
+            <span>FREE SHIPPING OVER $100 PURCHASE</span>
+        </div>
+        
+        <div class="col-md-6">
+            <div class="float-right pr-4">
+                <button class="bg-dark text-white btn-sm" (click)="addToBag()" style="width: 259px; height: 52px;">ADD TO BAG -- ${{ item.price }}</button>
+            </div>
+        </div>
+    </div>
+</div>
